@@ -18,5 +18,5 @@ def main():
     counter = count_words(words)
     write_count_words(counter, output_folder)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
