@@ -9,11 +9,14 @@ from ._internals.read_all_lines import read_all_lines
 
 
 def main():
-    all_lines = read_all_lines()
+    input_folder = "data/input"
+    output_folder = "data/output"
+
+    all_lines = read_all_lines(input_folder)
     all_lines = preprocess_lines(all_lines)
     words = split_into_words(all_lines)
     counter = count_words(words)
-    write_count_words(counter)
+    write_count_words(counter, output_folder)
 
 if _name_ == "_main_":
     main()
